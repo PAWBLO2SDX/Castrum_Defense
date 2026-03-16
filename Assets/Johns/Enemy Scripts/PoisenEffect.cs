@@ -1,16 +1,32 @@
+using System.Collections;
 using UnityEngine;
 
 public class PoisenEffect : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private bool isPoisoned = false;
+
+    public void ApplyPoison(float duration, float tickRate, float damagePerTick)
     {
-        
+        if (!isPoisoned)
+        {
+            StartCoroutine(DoPoisonDamage(duration, tickRate, damagePerTick));
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator DoPoisonDamage(float duration, float tickRate, float damagePerTick)
     {
-        
+        isPoisoned = true;
+        float timer = 0f;
+
+        // Loop for the total duration of the effect
+        while (timer < duration)
+        {
+            // Apply damage every 'tickRate' seconds
+            GetComponent<EnemyHealthSystem>()?.TakeDamage(damagePerTick);
+            yield return new WaitForSeconds(tickRate);
+            timer += tickRate;
+        }
+
+        isPoisoned = false;
     }
 }
