@@ -1,11 +1,10 @@
 using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
+using System;
 
 public class EnemyHealthSystem : MonoBehaviour
 {
-
-
     private Vector3 _targetPosition;
 
     private int _currentWaypoint = 0;
@@ -14,7 +13,9 @@ public class EnemyHealthSystem : MonoBehaviour
 
     private float currentHealth;
 
- //   private Path currentPath;
+    private Path currentPath;
+
+    public static Action<EnemyHealthSystem> OnEnemyReachedEnd { get; internal set; }
 
     private void Awake()
     {
@@ -63,11 +64,11 @@ public class EnemyHealthSystem : MonoBehaviour
             }
             else
             {
-                // Enemy has reached the end of the path, you can handle it here (e.g., damage the player, destroy the enemy, etc.)
+                //Enemy has reached the end of the path, you can handle it here (e.g., damage the player, destroy the enemy, etc.)
                 Destroy(gameObject);
             }
         }
     }
 
-    // Check if the enemy has reached the target position
+ 
 }
