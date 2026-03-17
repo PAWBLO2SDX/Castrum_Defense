@@ -22,6 +22,8 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesToSpawn;
     private int enemyIndex;
 
+    public static int OnWaveChanged { get; internal set; }
+
     private void Awake()
     {
         main = this;
