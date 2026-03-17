@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private GameObject levelManager;
-    [SerializeField] private Waves[] wavePrefabs;
+    [SerializeField] private Waves[] waveScripts;
     [Header("Attributes")]
     [SerializeField] private float enemiesPerSecond = 0.5f;
     [Header("Events")]
@@ -21,6 +21,8 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesAlive;
     //private int enemiesToSpawn1;
     private int enemyIndex = 0;
+    private GameObject newEnemy;
+    public List<GameObject> spawnedEnemies;
 
     private void Awake()
     {
@@ -33,8 +35,10 @@ public class EnemySpawner : MonoBehaviour
         
     }
 
-    private void SpawnEnemy()
+    public void SpawnEnemy()
     {
-         GameObject prefabToSpawn = wavePrefabs[currentWave].enemiesToSpawn[enemyIndex];
+        GameObject prefabToSpawn = waveScripts[currentWave].enemiesToSpawn[enemyIndex];
+        newEnemy = Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+        spawnedEnemies.Add(newEnemy);
     }
 }
