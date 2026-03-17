@@ -1,19 +1,28 @@
-using FileHelpers;
+using System.Diagnostics;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    [Serialize Field] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text MoneyText;
+    [SerializeField] private TMP_Text livesText;
     [SerializeField] private TMP_Text waveText;
+    private void UpdateWaveText(int currentWave)
+    {
+        waveText.text = $"Wave:{currentWave + 1}";
+    }
 
-    public int UpdateWaveText { get; private set; }
+    private void UpdateLivesText(int currentLives)
+    {
+        livesText.text = $"Lives:{currentLives}";
+    }
 
     private void OnEnable()
     {
-        EnemySpawner.OnWaveChanged + -UpdateWaveText;
+
+
+
     }
 
-
+    
 }

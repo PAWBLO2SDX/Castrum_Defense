@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Canvas
+  - Wave
   layers:
   - Default
   - TransparentFX
