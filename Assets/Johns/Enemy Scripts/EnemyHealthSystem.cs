@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 
 public class EnemyHealthSystem : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed = 2f;
+
 
     private Vector3 _targetPosition;
 
@@ -50,8 +50,8 @@ public class EnemyHealthSystem : MonoBehaviour
     private void Update()
     {
         // Move towards the target position
-        transform.position = Vector3.MoveTowards(transform.position, _targetPosition, movementSpeed * Time.deltaTime);
-        movementSpeed += 0.01f;
+       // transform.position = Vector3.MoveTowards(transform.position, _targetPosition, movementSpeed * Time.deltaTime);
+       // movementSpeed += 0.01f;
         // Check if the enemy has reached the target position
         float relativeDistance = (transform.position - _targetPosition).magnitude;
         if (relativeDistance < 0.1f)
