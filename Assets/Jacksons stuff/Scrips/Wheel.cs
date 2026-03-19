@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System.Collections;
 
 public class Wheel : MonoBehaviour
@@ -12,18 +13,42 @@ public class Wheel : MonoBehaviour
 
     [SerializeField]
     private TMPro.TMP_Text winText;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         coroutineAllowed = true;
+
+        if (winText == null)
+        {
+            Debug.LogWarning($"{nameof(Wheel)}: winText is not assigned in the Inspector.");
+        }
     }
 
     // Update is called once per frame
-    void Update()
+    private 
+       void Update()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && coroutineAllowed)
+        
+        bool beganTouch = Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject();
+        bool beganMouse = Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject();
+
+        if ((beganTouch || beganMouse) && coroutineAllowed)
         {
             StartCoroutine(Spin());
+        }
+    }
+
+    
+    public void StartSpin()
+    {
+        if (coroutineAllowed)
+        {
+            StartCoroutine(Spin());
+        }
+        else
+        {
+            Debug.Log($"{nameof(Wheel)}: Spin requested but coroutine not allowed.");
         }
     }
 
@@ -52,33 +77,38 @@ public class Wheel : MonoBehaviour
             transform.Rotate(0, 0, 22.5f);
         }
 
-        finalAngle = Mathf.RoundToInt(transform.eulerAngles.z);
+        
+        finalAngle = Mathf.RoundToInt(transform.eulerAngles.z) % 360;
+        if (finalAngle < 0) finalAngle += 360;
 
         switch (finalAngle)
         {
-            case 0:
-                winText.text = "You Win 1";
+            case int angle when angle >= 0 && angle <= 44:
+                winText.text = "You win a lot";
                 break;
-            case 45:
-                winText.text = "You Win 2";
+            case int angle when angle >= 45 && angle <= 89:
+                winText.text = "You win a bit";
                 break;
-            case 90:
-                winText.text = "You win 3";
+            case int angle when angle >= 90 && angle <= 134:
+                winText.text = "You lose half";
                 break;
-            case 135:
-                winText.text = "You win 4";
+            case int angle when angle >= 135 && angle <= 179:
+                winText.text = "You lose a bit";
                 break;
-            case 180:
-                winText.text = "You win 5";
+            case int angle when angle >= 180 && angle <= 224:
+                winText.text = "You win a bit";
                 break;
-            case 225:
-                winText.text = "You win 6";
+            case int angle when angle >= 225 && angle <= 269:
+                winText.text = "You lose a bit";
                 break;
-            case 270:
-                winText.text = "You win 7";
+            case int angle when angle >= 270 && angle <= 314:
+                winText.text = "You lose everything";
                 break;
-            case 315:
-                winText.text = "You lose!";
+            case int angle when angle >= 315 && angle <= 360:
+                winText.text = "You win a bit";
+                break;
+            default:
+                winText.text = $"Angle: {finalAngle}";
                 break;
         }
         coroutineAllowed = true;

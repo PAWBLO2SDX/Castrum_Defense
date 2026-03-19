@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class PoisenEffect : MonoBehaviour
+public class PoisonEffect : MonoBehaviour
 {
     private bool isPoisoned = false;
 

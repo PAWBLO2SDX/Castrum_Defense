@@ -30,7 +30,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 //destroys the enemy object if true, as well as making the player take damage
 
-                //EnemySpawner.onEnemyDestroy.Invoke();
+                EnemySpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
             }
             else
