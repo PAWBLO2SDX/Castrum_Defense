@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
     private bool isSpawning = false;
     private bool gamePaused = false; //adding this in case we want to make a pause menu in our game
     private int enemiesAlive;
-    //private int enemiesToSpawn1;
+    //private int enemiesToSpawn1; might use this not sure yet tho
     private int enemyIndex = 0;
     private GameObject newEnemy;
     public List<GameObject> spawnedEnemies;
@@ -41,23 +41,23 @@ public class EnemySpawner : MonoBehaviour
         if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && !(waveScripts[currentWave].enemiesToSpawn.Length == enemiesAlive))
         {
             SpawnEnemy();
-            enemiesAlive++;
-            enemyIndex++;
+            main.enemiesAlive++;
+            main.enemyIndex++;
             timeSinceLastSpawn = 0f;
         }
 
-        if (enemiesAlive == 0 && waveScripts[currentWave].enemiesToSpawn.Length == enemyIndex + 1)
+        if (main.enemiesAlive == 0 && waveScripts[currentWave].enemiesToSpawn.Length == enemyIndex + 1)
         {
             EndWave();
         }
 
-        if (spawnedEnemies.Count > 0)
+        if (main.spawnedEnemies.Count > 0)
         {
-            for (int i = 0; i < spawnedEnemies.Count; i++)
+            for (int i = 0; i < main.spawnedEnemies.Count; i++)
             {
-                if (spawnedEnemies[i] == null)
+                if (main.spawnedEnemies[i] == null)
                 {
-                    spawnedEnemies.Remove(spawnedEnemies[i]);
+                    main.spawnedEnemies.Remove(main.spawnedEnemies[i]);
                 }
             }
         }
@@ -82,11 +82,14 @@ public class EnemySpawner : MonoBehaviour
 
     private void EndWave()
     {
+        Debug.Log("End wave");
         main.isSpawning = false;
+        main.currentWave++;
+        main.enemyIndex = 0;
     }
 
     private void EnemyDestroyed()
     {
-        enemiesAlive--;
+        main.enemiesAlive--;
     }
 }
