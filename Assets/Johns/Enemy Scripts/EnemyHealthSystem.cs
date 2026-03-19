@@ -5,6 +5,8 @@ using System;
 
 public class EnemyHealthSystem : MonoBehaviour
 {
+    public int health;
+
     private Vector3 _targetPosition;
 
     private int _currentWaypoint = 0;
@@ -19,6 +21,7 @@ public class EnemyHealthSystem : MonoBehaviour
 
     private void Awake()
     {
+
         GameObject pathObject = GameObject.Find("Path1");
         if (pathObject != null)
         {
@@ -28,6 +31,7 @@ public class EnemyHealthSystem : MonoBehaviour
         {
             Debug.LogError("Path1 GameObject not found in the scene.");
         }
+
     }
     void Start()
     {
@@ -35,21 +39,26 @@ public class EnemyHealthSystem : MonoBehaviour
     }
     private void OnEnable()
     {
+
       _currentWaypoint= 0;
       //  Vector3 vector3 = currentPath.GetPosition(_currentWaypoint);
        // _targetPosition = vector3;
+
     }
     public void TakeDamage(float damage)
     {
+
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
         }
+
     }
 
     private void Update()
     {
+
         // Move towards the target position
        // transform.position = Vector3.MoveTowards(transform.position, _targetPosition, movementSpeed * Time.deltaTime);
        // movementSpeed += 0.01f;
@@ -68,6 +77,7 @@ public class EnemyHealthSystem : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
     }
 
  
