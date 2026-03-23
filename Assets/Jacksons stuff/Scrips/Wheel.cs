@@ -26,8 +26,7 @@ public class Wheel : MonoBehaviour
     }
 
     // Update is called once per frame
-    private 
-       void Update()
+    private void Update()
     {
         
         bool beganTouch = Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject();

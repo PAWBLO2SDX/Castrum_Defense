@@ -73,5 +73,6 @@ MonoBehaviour:
   levelManager: {fileID: 5686809643442209502}
   waveScripts:
   - {fileID: 11400000, guid: 1d70649bade084a408c4dc1c87296e2d, type: 2}
+  - {fileID: 11400000, guid: 3cb0cbae33ee14c41bc20a64ed6888ef, type: 2}
   enemiesPerSecond: 0.5
   spawnedEnemies: []

@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
         if (!isSpawning) return;
         timeSinceLastSpawn += Time.deltaTime;
 
-        if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && !(waveScripts[currentWave].enemiesToSpawn.Length == enemiesAlive))
+        if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && !(waveScripts[currentWave].enemiesToSpawn.Length == enemyIndex))
         {
             SpawnEnemy();
             main.enemiesAlive++;
@@ -46,7 +46,7 @@ public class EnemySpawner : MonoBehaviour
             timeSinceLastSpawn = 0f;
         }
 
-        if (main.enemiesAlive == 0 && waveScripts[currentWave].enemiesToSpawn.Length == enemyIndex + 1)
+        if (main.enemiesAlive == 0 && waveScripts[currentWave].enemiesToSpawn.Length == enemyIndex)
         {
             EndWave();
         }
