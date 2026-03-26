@@ -11,5 +11,8 @@ public class Money : MonoBehaviour
 
     //need something for buying towers and adding them to the list of tower prefabs
 
+    public void OpenShop()
+    {
 
+    }
 }

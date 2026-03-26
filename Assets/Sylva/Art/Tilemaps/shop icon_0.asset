@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: tilemap_station_18
+  m_Name: shop icon_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -1905402760, guid: 39c9a6813e81d324e8e9b6f1271dcca6, type: 3}
+  m_Sprite: {fileID: 5533260696984571765, guid: 95e568f6a66f3eb4faf44a1cb8acd171, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -31,6 +31,6 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  m_InstancedGameObject: {fileID: 4924548293197314608, guid: a6e59053a03d7d34abd7898c01507d73, type: 3}
+  m_InstancedGameObject: {fileID: 7704802765244740671, guid: 8cbf1d1d3f5b5ab4bacc1ce01be856e8, type: 3}
   m_Flags: 1
   m_ColliderType: 1

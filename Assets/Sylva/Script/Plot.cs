@@ -5,6 +5,8 @@ public class Plot : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject dimPrefab;
     [SerializeField] private GameObject levelManager;
+    [Header("Variable")]
+    [SerializeField] private bool shopTile;
 
     private GameObject tower;
     private GameObject dimmer;
@@ -23,5 +25,10 @@ public class Plot : MonoBehaviour
     private void OnMouseDown()
     {
         //this is gonna be where we check if the plot is purchased and such using the Money script. This will be a nightmare
+
+        if (shopTile)
+        {
+            levelManager.GetComponent<Money>().OpenShop();
+        }
     }
 }
