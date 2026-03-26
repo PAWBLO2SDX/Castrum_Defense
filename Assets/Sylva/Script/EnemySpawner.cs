@@ -21,10 +21,10 @@ public class EnemySpawner : MonoBehaviour
     private bool isSpawning = false;
     private bool gamePaused = false; //adding this in case we want to make a pause menu in our game
     private int enemiesAlive;
-    //private int enemiesToSpawn1; might use this not sure yet tho
     private int enemyIndex = 0;
     private GameObject newEnemy;
     public List<GameObject> spawnedEnemies;
+    public int waveBought = 2; //used to stop you from progressing waves past the one you've bought last, starts at 0 for same reason as currentWave
 
 
     private void Awake()
@@ -84,7 +84,10 @@ public class EnemySpawner : MonoBehaviour
     {
         Debug.Log("End wave");
         main.isSpawning = false;
-        main.currentWave++;
+        if (main.currentWave < main.waveBought)
+        {
+            currentWave++;
+        }
         main.enemyIndex = 0;
     }
 

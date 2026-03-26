@@ -8,6 +8,7 @@ public class Plot : MonoBehaviour
 
     private GameObject tower;
     private GameObject dimmer;
+    [HideInInspector] public bool tileBought = false;
 
     private void OnMouseEnter()
     {
