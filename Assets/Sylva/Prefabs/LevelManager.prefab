@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6183319493198838198}
   - component: {fileID: 1656524643957931280}
   - component: {fileID: 4444677625261159434}
+  - component: {fileID: 5334012119738104742}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -80,3 +81,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a5664f75e5b045e4fb1a6eb9f6f2cca1, type: 2}
   enemiesPerSecond: 1
   spawnedEnemies: []
+  waveBought: 2
+--- !u!114 &5334012119738104742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5686809643442209502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 339a6351dea58034ba227fee4d444897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 5686809643442209502}
+  startingMoney: 0
+  currentMoney: 0
