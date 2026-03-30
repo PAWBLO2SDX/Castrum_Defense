@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class Money : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Header("References")]
+    [SerializeField] private GameObject levelManager;
+    [Header("Variables")]
+    [SerializeField] private int startingMoney;
 
-    // Update is called once per frame
-    void Update()
+    [HideInInspector] public int currentMoney;
+
+    //need something for buying towers and adding them to the list of tower prefabs
+
+    public void OpenShop()
     {
-        
+
     }
 }
