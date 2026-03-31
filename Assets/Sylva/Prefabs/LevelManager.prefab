@@ -79,9 +79,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3cb0cbae33ee14c41bc20a64ed6888ef, type: 2}
   - {fileID: 11400000, guid: 04a5fd836995e664aac5b8f217341cbc, type: 2}
   - {fileID: 11400000, guid: a5664f75e5b045e4fb1a6eb9f6f2cca1, type: 2}
+  - {fileID: 11400000, guid: feaa9ed69b36703459d571c7d84392bf, type: 2}
+  - {fileID: 11400000, guid: 2a28b395727f14f47b490bac8f6fe233, type: 2}
   enemiesPerSecond: 1
   spawnedEnemies: []
-  waveBought: 2
+  waveBought: 5
 --- !u!114 &5334012119738104742
 MonoBehaviour:
   m_ObjectHideFlags: 0

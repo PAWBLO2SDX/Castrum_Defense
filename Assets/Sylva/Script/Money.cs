@@ -13,6 +13,7 @@ public class Money : MonoBehaviour
 
     public void OpenShop()
     {
-
+        Debug.Log("shop open");
+        levelManager.GetComponent<LevelManager>().shopOpen = true;
     }
 }
