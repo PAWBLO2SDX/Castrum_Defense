@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8bcfa5dc8ea2a314fb53fb1665818456
+guid: 1cb572400ac1cfa41b07645307d00eb1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6135570678308618660
-    second: pixilart-drawing (6)_0
+      213: -2863940993763500022
+    second: soaker and nailgunner projectile_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixilart-drawing (6)_0
+      name: soaker and nailgunner projectile_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 768
-        height: 448
+        x: 26
+        y: 31
+        width: 22
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5ebc19c9f21adaa0800000000000000
-      internalID: -6135570678308618660
+      spriteID: a002c0907dc3148d0800000000000000
+      internalID: -2863940993763500022
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      pixilart-drawing (6)_0: -6135570678308618660
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

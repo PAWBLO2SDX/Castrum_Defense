@@ -27,12 +27,5 @@ public class Projectile : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision collision)
-    {
-       if(collision.gameObject.GetComponent<EnemyHealthSystem>())
-       {
-            collision.gameObject.GetComponent<EnemyHealthSystem>().health -= damage;
-            Destroy(gameObject);
-        }
-    }
+
 }

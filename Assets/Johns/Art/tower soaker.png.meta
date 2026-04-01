@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 8bcfa5dc8ea2a314fb53fb1665818456
+guid: c1d329d849f6fbc4e9be28f2cb2028fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6135570678308618660
-    second: pixilart-drawing (6)_0
+      213: -4267313453065536686
+    second: tower soaker_0
+  - first:
+      213: 8326205184928763605
+    second: tower soaker_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,23 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixilart-drawing (6)_0
+      name: tower soaker_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 768
-        height: 448
+        width: 32
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5ebc19c9f21adaa0800000000000000
-      internalID: -6135570678308618660
+      spriteID: 25b78cc060577c4c0800000000000000
+      internalID: -4267313453065536686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tower soaker_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dec1b6608f9c8370800000000000000
+      internalID: 8326205184928763605
       vertices: []
       indices: 
       edges: []
@@ -151,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5f1930dc43ebca640aa82b8e0ee7a3fe
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pixilart-drawing (6)_0: -6135570678308618660
+      tower soaker_0: -4267313453065536686
+      tower soaker_1: 8326205184928763605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

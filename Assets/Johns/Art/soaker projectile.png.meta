@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8bcfa5dc8ea2a314fb53fb1665818456
+guid: 9282f9325ba6b7442a2dbebf935ebc21
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6135570678308618660
-    second: pixilart-drawing (6)_0
+      213: 250175781001240475
+    second: soaker projectile_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixilart-drawing (6)_0
+      name: soaker projectile_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 768
-        height: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5ebc19c9f21adaa0800000000000000
-      internalID: -6135570678308618660
+      spriteID: b9f1cfd1c8dc87300800000000000000
+      internalID: 250175781001240475
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f387a84956680d748a75225a545e3786
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pixilart-drawing (6)_0: -6135570678308618660
+      soaker projectile_0: 250175781001240475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
