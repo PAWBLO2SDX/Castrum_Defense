@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      nailgunner projectile_0: 6156242814486663773
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

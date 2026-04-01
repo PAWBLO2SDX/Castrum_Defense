@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      soaker and nailgunner projectile_0: -2863940993763500022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

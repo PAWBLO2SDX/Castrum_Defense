@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      incinerator_0: -4370006223003259277
+      incinerator_1: -2492572590653678570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
