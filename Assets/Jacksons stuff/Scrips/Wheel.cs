@@ -55,7 +55,7 @@ public class Wheel : MonoBehaviour
     {
         coroutineAllowed = false;
         randomValue = Random.Range(20, 30);
-        timeInterval = 0.01f;
+        timeInterval = 0.1f;
 
         for (int i = 0; i < randomValue; i++)
         {
@@ -83,28 +83,28 @@ public class Wheel : MonoBehaviour
         switch (finalAngle)
         {
             case int angle when angle >= 0 && angle <= 44:
-                winText.text = "You win a lot";
+                winText.text = "You win a Tower";
                 break;
             case int angle when angle >= 45 && angle <= 89:
-                winText.text = "You win a bit";
+                winText.text = "You win a bit 1";
                 break;
             case int angle when angle >= 90 && angle <= 134:
                 winText.text = "You lose half";
                 break;
             case int angle when angle >= 135 && angle <= 179:
-                winText.text = "You lose a bit";
+                winText.text = "You lose a bit 1";
                 break;
             case int angle when angle >= 180 && angle <= 224:
-                winText.text = "You win a bit";
+                winText.text = "You win a bit 2";
                 break;
             case int angle when angle >= 225 && angle <= 269:
-                winText.text = "You lose a bit";
+                winText.text = "You lose a bit 2";
                 break;
             case int angle when angle >= 270 && angle <= 314:
                 winText.text = "You lose everything";
                 break;
             case int angle when angle >= 315 && angle <= 360:
-                winText.text = "You win a bit";
+                winText.text = "You win a bit 3";
                 break;
             default:
                 winText.text = $"Angle: {finalAngle}";
