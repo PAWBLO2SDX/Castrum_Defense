@@ -22,6 +22,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
+
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
         {
             pathIndex++;
@@ -43,6 +44,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         //sets the direction and moves towards the object in the path Array corresponding to the value of pathIndex
         
         Vector2 direction = (target.position - transform.position).normalized;
