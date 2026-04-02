@@ -27,23 +27,29 @@ public class TurrentSoaker : MonoBehaviour
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2)transform.up, 0f, enemyMask);
 
-       // if (hits.Length > 0)
+        if (hits.Length > 0)
         {
-            //for (int i = 0; i < hits.Length; i++) 
+          for (int i = 0; i < hits.Length; i++) 
             {
-                //RaycastHit2D hit = hits[i];
+                RaycastHit2D hit = hits[i];
 
-                //EnemyMovement em = hit.transform.GetComponent<EnemyMovement>();
-                //em.UpdateSpeed(0.5f); // Reduce speed to 50% of original
-                //StartCoroutine(ResetEnemySpeed(em)); // Reset speed after freezeTime
+                EnemyMovement em = hit.transform.GetComponent<EnemyMovement>();
+                em.UpdateSpeed(0.5f); // Reduce speed to 50% of original
+                StartCoroutine(ResetEnemySpeed(em)); // Reset speed after freezeTime
             }
         }
     }
        
-  //  private IEnumerator ResetEnemySpeed(EnemyMovement en)
+    private IEnumerator ResetEnemySpeed(EnemyMovement em)
+    {
+        yield return new WaitForSeconds(freezeTime); // Freeze duration
+    }
     
-        //yield return new WaitForSeconds(freezeTime); // Freeze duration
+       private void OnDrawGizmosSelected()
+    {
+        Handles.color = Color.blue;
+        Handles.DrawWireDisc(transform.position, Vector3.forward, targetingRange);
+    }
 
-        //ParticleSystemEmissionType.resetSpeed
-    
+
 }

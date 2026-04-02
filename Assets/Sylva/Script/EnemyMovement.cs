@@ -12,10 +12,12 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform target; //the target path object that the enemy will be moving to
     private int pathIndex = 0;
+    private float baseSpeed; //stores the original speed of the enemy, used for resetting speed after being slowed by the turrent soaker
     //allows tracking of which specific object the enemy is at along the path, if it reaches the last in the path index, then you take damage and the enemy dies
 
     private void Start()
     {
+        baseSpeed = moveSpeed;
         target = LevelManager.main.path[pathIndex];
     }
     //selects the first point in the path to start moving towards
@@ -46,9 +48,18 @@ public class EnemyMovement : MonoBehaviour
     {
 
         //sets the direction and moves towards the object in the path Array corresponding to the value of pathIndex
-        
+
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.linearVelocity = direction * moveSpeed;
+    }
+    public void UpdateSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
+    }
+
+     public void ResetSpeed()
+    {
+        moveSpeed = baseSpeed;
     }
 }

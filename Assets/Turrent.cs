@@ -3,17 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using System.Linq.Expressions;
+using System;
 
 public class Turrent : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Transform turrentRotationPoint;
     [SerializeField] private LayerMask enemyMask;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firingPoint;
 
     [Header("Attribute")]
     [SerializeField] private float targetingRange= 5f;
     [SerializeField] private float rotationSpeed = 5f;
+    [SerializeField] private float bps = 1f; // Bullets per second
+
     private Transform target;
+    private float timeUntilFire;
 
     private void Update()
     {
@@ -30,8 +36,25 @@ public class Turrent : MonoBehaviour
         {
             target = null;
         }
+        else {             timeUntilFire += Time.deltaTime;
+            if (timeUntilFire >= 1f / bps)
+            {
+                Shoot();
+                timeUntilFire = 0f;
+            }
+        }
+    }
+    private void Shoot()
+    {
+       GameObject bulletobj =  Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        Bullet bullet = bulletobj.GetComponent<Bullet>();
+        bullet.SetTarget(target);
     }
 
+    private GameObject Instantiate(GameObject bulletPrefab, Vector3 position, object indentity)
+    {
+        throw new NotImplementedException();
+    }
 
     private void FindTarget()
     {
