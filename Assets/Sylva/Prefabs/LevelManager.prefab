@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1656524643957931280}
   - component: {fileID: 4444677625261159434}
   - component: {fileID: 5334012119738104742}
+  - component: {fileID: 1570453243783977474}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -61,6 +62,7 @@ MonoBehaviour:
   - {fileID: 5333320483587540367, guid: cbcac1c5543a4fe41a37c705be386475, type: 3}
   - {fileID: 5202812813094166705, guid: 616a74fc494086f419f7247d313c645e, type: 3}
   - {fileID: 5996642679014609401, guid: ad80f34ca8b6f444ba80fb3983ea2a7f, type: 3}
+  shopOpen: 0
 --- !u!114 &4444677625261159434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,5 +99,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 5686809643442209502}
+  shopPrefab: {fileID: 2668012336964316397, guid: 43821189c2ba4f342b1bf3edac07370d, type: 3}
+  shopSpawn: {fileID: 7868255030247592787, guid: 6e3d7b2adb80e7248969e1f70e2363ed, type: 3}
   startingMoney: 0
   currentMoney: 0
+  shopSpawned: 0
+--- !u!114 &1570453243783977474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5686809643442209502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab27aca83fea024ab5fd0e7a7bd542b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefabs:
+  - {fileID: 819375485135971927, guid: d7f0e6c2e0e14444baaa35e075ebe974, type: 3}
+  levelManager: []
+  towerList:
+  - {fileID: 819375485135971927, guid: d7f0e6c2e0e14444baaa35e075ebe974, type: 3}
+  placeableTowers: 1
