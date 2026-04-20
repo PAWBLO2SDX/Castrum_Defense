@@ -7292,6 +7292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: e7a1703feec621545b6cbbb4ba992bde, type: 2}
+  popupPanel: {fileID: 0}
 --- !u!114 &736536209
 MonoBehaviour:
   m_ObjectHideFlags: 0

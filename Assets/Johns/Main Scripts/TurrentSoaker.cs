@@ -5,6 +5,7 @@ using UnityEditor;
 public class TurrentSoaker : MonoBehaviour
 {
     [Header("References")]
+    [SerializeField] private Transform turrentRotationPoint;
     [SerializeField] private LayerMask enemyMask;
 
     [Header("Attribute")]
