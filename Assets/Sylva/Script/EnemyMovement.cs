@@ -3,11 +3,12 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public static EnemyMovement main;
-
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject levelManager;
+
     [Header("Attributes")]
+    [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float moveSpeed; //change this value in the Unity editor for the enemy prefabs since they'll have varying speeds
 
     private Transform target; //the target path object that the enemy will be moving to

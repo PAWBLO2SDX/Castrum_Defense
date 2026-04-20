@@ -36,13 +36,15 @@ public class Turrent : MonoBehaviour
         {
             target = null;
         }
-        else {             timeUntilFire += Time.deltaTime;
+        else { timeUntilFire += Time.deltaTime;
             if (timeUntilFire >= 1f / bps)
             {
                 Shoot();
                 timeUntilFire = 0f;
             }
         }
+       
+
     }
     private void Shoot()
     {
@@ -90,7 +92,6 @@ public class Turrent : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, targetingRange);
     }
 }

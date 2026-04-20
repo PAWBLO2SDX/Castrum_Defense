@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     public static EnemySpawner main;
 
     [Header("References")]
+    [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject levelManager;
     [SerializeField] private Waves[] waveScripts;
     [Header("Attributes")]
