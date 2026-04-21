@@ -62,7 +62,7 @@ MonoBehaviour:
   - {fileID: 5333320483587540367, guid: cbcac1c5543a4fe41a37c705be386475, type: 3}
   - {fileID: 5202812813094166705, guid: 616a74fc494086f419f7247d313c645e, type: 3}
   - {fileID: 5996642679014609401, guid: ad80f34ca8b6f444ba80fb3983ea2a7f, type: 3}
-  shopOpen: 0
+  shopOpen: 1
 --- !u!114 &4444677625261159434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,6 +75,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57030c2307e8274f81a3aa92532beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
   levelManager: {fileID: 5686809643442209502}
   waveScripts:
   - {fileID: 11400000, guid: 1d70649bade084a408c4dc1c87296e2d, type: 2}
@@ -101,9 +104,9 @@ MonoBehaviour:
   levelManager: {fileID: 5686809643442209502}
   shopPrefab: {fileID: 2668012336964316397, guid: 43821189c2ba4f342b1bf3edac07370d, type: 3}
   shopSpawn: {fileID: 7868255030247592787, guid: 6e3d7b2adb80e7248969e1f70e2363ed, type: 3}
-  startingMoney: 0
+  startingMoney: 500
   currentMoney: 0
-  shopSpawned: 0
+  shopSpawned: 1
 --- !u!114 &1570453243783977474
 MonoBehaviour:
   m_ObjectHideFlags: 0
