@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1695206235826834744}
   - component: {fileID: 7652364319198583663}
   - component: {fileID: -6714710029659178989}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Test6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 4971779606943906762}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1695206235826834744}
   levelManager: {fileID: 5686809643442209502, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
+  targetingRange: 5
   moveSpeed: 1.4
 --- !u!61 &-6714710029659178989
 BoxCollider2D:
