@@ -36,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (!isSpawning || levelManager.GetComponent<LevelManager>().shopOpen) return;
+        if (!isSpawning || levelManager.GetComponent<Money>().shopSpawned) return;
         timeSinceLastSpawn += Time.deltaTime;
 
         if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && !(waveScripts[currentWave].enemiesToSpawn.Length == enemyIndex))
