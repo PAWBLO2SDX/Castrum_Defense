@@ -41,9 +41,34 @@ public class Money : MonoBehaviour
 
     public void BuyTower(int num)
     {
-        if (num == 1)
+        if (num == 1 && FindFirstObjectByType<Money>().currentMoney >= 100)
         {
-            levelManager.GetComponent<BuildManager>().SetSelectedTower(num - 1);
+            FindFirstObjectByType<Money>().currentMoney -= 100f;
+            levelManager.GetComponent<BuildManager>().SetSelectedTower(0);
+            levelManager.GetComponent<BuildManager>().IncreaseTower();
+        }
+        else if (num == 2 && FindFirstObjectByType<Money>().currentMoney >= 250)
+        {
+            FindFirstObjectByType<Money>().currentMoney -= 250f;
+            levelManager.GetComponent<BuildManager>().SetSelectedTower(1);
+            levelManager.GetComponent<BuildManager>().IncreaseTower();
+        }
+        else if (num == 3 && FindFirstObjectByType<Money>().currentMoney >= 200)
+        {
+            FindFirstObjectByType<Money>().currentMoney -= 200f;
+            levelManager.GetComponent<BuildManager>().SetSelectedTower(2);
+            levelManager.GetComponent<BuildManager>().IncreaseTower();
+        }
+        else if (num == 4 && FindFirstObjectByType<Money>().currentMoney >= 400)
+        {
+            FindFirstObjectByType<Money>().currentMoney -= 400f;
+            levelManager.GetComponent<BuildManager>().SetSelectedTower(3);
+            levelManager.GetComponent<BuildManager>().IncreaseTower();
+        }
+        else if (num == 5 && FindFirstObjectByType<Money>().currentMoney >= 750)
+        {
+            FindFirstObjectByType<Money>().currentMoney -= 750f;
+            levelManager.GetComponent<BuildManager>().SetSelectedTower(4);
             levelManager.GetComponent<BuildManager>().IncreaseTower();
         }
     }
