@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     public static EnemySpawner main;
 
     [Header("References")]
+    [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject levelManager;
     [SerializeField] private Waves[] waveScripts;
     [Header("Attributes")]
@@ -35,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (!isSpawning || levelManager.GetComponent<LevelManager>().shopOpen) return;
+        if (!isSpawning || levelManager.GetComponent<Money>().shopSpawned) return;
         timeSinceLastSpawn += Time.deltaTime;
 
         if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && !(waveScripts[currentWave].enemiesToSpawn.Length == enemyIndex))

@@ -1,44 +1,46 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
     public static EnemyMovement main;
-
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject levelManager;
-    [Header("Attributes")]
-    [SerializeField] private float moveSpeed; //change this value in the Unity editor for the enemy prefabs since they'll have varying speeds
 
-    private Transform target; //the target path object that the enemy will be moving to
+    [Header("Attributes")]
+    [SerializeField] private float targetingRange = 5f;
+    [SerializeField] private float moveSpeed; // change this value in the Unity editor for the enemy prefabs since they'll have varying speeds
+
+    private Transform target; // the target path object that the enemy will be moving to
     private int pathIndex = 0;
-    private float baseSpeed; //stores the original speed of the enemy, used for resetting speed after being slowed by the turrent soaker
-    //allows tracking of which specific object the enemy is at along the path, if it reaches the last in the path index, then you take damage and the enemy dies
+    private float baseSpeed; // stores the original speed of the enemy
+    private readonly Dictionary<int, float> speedModifiers = new Dictionary<int, float>();
+    private int modifierCounter = 0;
+
+    private void Awake()
+    {
+        baseSpeed = moveSpeed;
+    }
 
     private void Start()
     {
-        baseSpeed = moveSpeed;
         target = LevelManager.main.path[pathIndex];
     }
-    //selects the first point in the path to start moving towards
 
     private void Update()
     {
-
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
         {
             pathIndex++;
-            //if statement checks if the pathIndex at its new value is past the last point in the pathway
             if (pathIndex >= LevelManager.main.path.Length)
             {
-                //destroys the enemy object if true, as well as making the player take damage
-
                 EnemySpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
             }
             else
             {
-                //sets the new target with the new pathIndex value
                 target = LevelManager.main.path[pathIndex];
             }
         }
@@ -46,20 +48,49 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        //sets the direction and moves towards the object in the path Array corresponding to the value of pathIndex
-
         Vector2 direction = (target.position - transform.position).normalized;
-
         rb.linearVelocity = direction * moveSpeed;
     }
+
+    // Legacy: sets an absolute speed
     public void UpdateSpeed(float newSpeed)
     {
         moveSpeed = newSpeed;
     }
 
-     public void ResetSpeed()
+    // Reset to original base speed and clear modifiers
+    public void ResetSpeed()
     {
+        speedModifiers.Clear();
         moveSpeed = baseSpeed;
+    }
+
+    // Adds a multiplicative speed modifier and returns an id to remove it later.
+    // Example: multiplier = 0.5f halves speed.
+    public int AddSpeedModifier(float multiplier)
+    {
+        modifierCounter++;
+        speedModifiers[modifierCounter] = multiplier;
+        RecalculateSpeed();
+        return modifierCounter;
+    }
+
+    // Removes modifier by id and recalculates speed
+    public void RemoveSpeedModifier(int id)
+    {
+        if (speedModifiers.Remove(id))
+        {
+            RecalculateSpeed();
+        }
+    }
+
+    private void RecalculateSpeed()
+    {
+        float mul = 1f;
+        foreach (var m in speedModifiers.Values)
+        {
+            mul *= m;
+        }
+        moveSpeed = baseSpeed * mul;
     }
 }

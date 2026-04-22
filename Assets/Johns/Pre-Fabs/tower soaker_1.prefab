@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3616125504388095612}
   - component: {fileID: 5421133454042849560}
-  m_Layer: 0
+  - component: {fileID: 4822771725979521828}
+  m_Layer: 7
   m_Name: tower soaker_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,3 +88,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4822771725979521828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4172951363367250233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 675b3bd54dc34a14aaa3305d98cdc1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turrentRotationPoint: {fileID: 0}
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 128
+  targetingRange: 3
+  aps: 0.25
+  freezeTime: 1
