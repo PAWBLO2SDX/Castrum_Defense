@@ -12,7 +12,7 @@ public class Plot : MonoBehaviour
     private GameObject tower;
     private GameObject hoverDimmer;
     private GameObject dimmer;
-    [HideInInspector] public bool tileBought = false;
+    public bool tileBought = false;
     public static float tileCost = 0f;
     public static int numTilesBought = 0;
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7552099034313579476}
   - component: {fileID: 2471352654824027350}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: Gambler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 8910623976148022744}
   - component: {fileID: 3755824218459937948}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: Radar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,7 +339,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8910623976148022744}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5334012119738104742, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
+        m_TargetAssemblyTypeName: Money, Assembly-CSharp
+        m_MethodName: BuyTower
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3833423044537986825
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +365,7 @@ GameObject:
   - component: {fileID: 1537551377199973742}
   - component: {fileID: 3892050649658970454}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Nailgunner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,7 +471,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1537551377199973742}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5334012119738104742, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
+        m_TargetAssemblyTypeName: Money, Assembly-CSharp
+        m_MethodName: BuyTower
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5618087716639085266
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +633,7 @@ GameObject:
   - component: {fileID: 2399919661807433474}
   - component: {fileID: 7612439150643169614}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Incinerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -715,7 +739,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2399919661807433474}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5334012119738104742, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
+        m_TargetAssemblyTypeName: Money, Assembly-CSharp
+        m_MethodName: BuyTower
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6995308867202664147
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +1033,7 @@ GameObject:
   - component: {fileID: 5972025428864787604}
   - component: {fileID: 4398026812153745618}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Overcharger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1103,7 +1139,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5972025428864787604}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5334012119738104742, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
+        m_TargetAssemblyTypeName: Money, Assembly-CSharp
+        m_MethodName: BuyTower
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9069469886227944140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1165,7 @@ GameObject:
   - component: {fileID: 7332887612115076130}
   - component: {fileID: 819292373855938474}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Soaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1223,4 +1271,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7332887612115076130}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5334012119738104742, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
+        m_TargetAssemblyTypeName: Money, Assembly-CSharp
+        m_MethodName: BuyTower
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
