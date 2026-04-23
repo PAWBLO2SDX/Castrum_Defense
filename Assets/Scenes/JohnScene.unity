@@ -8289,7 +8289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5334012119738104742, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5334012119738104742, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
       propertyPath: currentMoney

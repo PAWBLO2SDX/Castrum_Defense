@@ -5,6 +5,7 @@ public class Money : MonoBehaviour
 
     public static Money main;
 
+    [SerializeField] private GameObject TowerPrefab;
     [Header("References")]
     [SerializeField] private GameObject levelManager;
     [SerializeField] private GameObject shopPrefab;
@@ -14,7 +15,8 @@ public class Money : MonoBehaviour
 
     public float currentMoney;
     public float waveCost = 200f;
-    [HideInInspector] public bool shopSpawned;
+    private bool shopSpawned = false;
+    public bool ShopSpawned => shopSpawned;
     private GameObject shopObject;
 
     //need something for buying towers and adding them to the list of tower prefabs
@@ -41,35 +43,35 @@ public class Money : MonoBehaviour
 
     public void BuyTower(int num)
     {
-        if (num == 1 && FindFirstObjectByType<Money>().currentMoney >= 100)
+        if (num == 1 && Money.main.currentMoney >= 100)
         {
-            FindFirstObjectByType<Money>().currentMoney -= 100f;
-            levelManager.GetComponent<BuildManager>().SetSelectedTower(0);
-            levelManager.GetComponent<BuildManager>().IncreaseTower();
+            main.currentMoney -= 100f;
+            BuildManager.main.SetSelectedTower(0);
+            BuildManager.main.IncreaseTower();
         }
-        else if (num == 2 && FindFirstObjectByType<Money>().currentMoney >= 250)
+        else if (num == 2 && Money.main.currentMoney >= 250)
         {
-            FindFirstObjectByType<Money>().currentMoney -= 250f;
-            levelManager.GetComponent<BuildManager>().SetSelectedTower(1);
-            levelManager.GetComponent<BuildManager>().IncreaseTower();
+            main.currentMoney -= 250f;
+            BuildManager.main.SetSelectedTower(1);
+            BuildManager.main.IncreaseTower();
         }
-        else if (num == 3 && FindFirstObjectByType<Money>().currentMoney >= 200)
+        else if (num == 3 && Money.main.currentMoney >= 200)
         {
-            FindFirstObjectByType<Money>().currentMoney -= 200f;
-            levelManager.GetComponent<BuildManager>().SetSelectedTower(2);
-            levelManager.GetComponent<BuildManager>().IncreaseTower();
+            main.currentMoney -= 200f;
+            BuildManager.main.SetSelectedTower(2);
+            BuildManager.main.IncreaseTower();
         }
-        else if (num == 4 && FindFirstObjectByType<Money>().currentMoney >= 400)
+        else if (num == 4 && Money.main.currentMoney >= 400)
         {
-            FindFirstObjectByType<Money>().currentMoney -= 400f;
-            levelManager.GetComponent<BuildManager>().SetSelectedTower(3);
-            levelManager.GetComponent<BuildManager>().IncreaseTower();
+            main.currentMoney -= 400f;
+            BuildManager.main.SetSelectedTower(3);
+            BuildManager.main.IncreaseTower();
         }
-        else if (num == 5 && FindFirstObjectByType<Money>().currentMoney >= 750)
+        else if (num == 5 && Money.main.currentMoney >= 750)
         {
-            FindFirstObjectByType<Money>().currentMoney -= 750f;
-            levelManager.GetComponent<BuildManager>().SetSelectedTower(4);
-            levelManager.GetComponent<BuildManager>().IncreaseTower();
+            main.currentMoney -= 750f;
+            BuildManager.main.SetSelectedTower(4);
+            BuildManager.main.IncreaseTower();
         }
     }
 

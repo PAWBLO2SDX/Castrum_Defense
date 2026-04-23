@@ -17,14 +17,14 @@ public class Money_Updates : MonoBehaviour
 
     public void Start()
     {
-        levelManager = FindFirstObjectByType<LevelManager>().gameObject;
-        main.currentMoneyNum.text = main.levelManager.GetComponent<Money>().currentMoney.ToString();
-        main.currentWaveCost.text = main.levelManager.GetComponent<Money>().waveCost.ToString();
+        levelManager = LevelManager.main.gameObject;
+        main.currentMoneyNum.text = Money.main.currentMoney.ToString();
+        main.currentWaveCost.text = Money.main.waveCost.ToString();
     }
 
     public void Update()
     {
-        main.currentMoneyNum.text = main.levelManager.GetComponent<Money>().currentMoney.ToString();
-        main.currentWaveCost.text = main.levelManager.GetComponent<Money>().waveCost.ToString();
+        main.currentMoneyNum.text = Money.main.currentMoney.ToString();
+        main.currentWaveCost.text = Money.main.waveCost.ToString();
     }
 }

@@ -9,7 +9,6 @@ public class BuildManager : MonoBehaviour
     [SerializeField] private GameObject[] levelManager;
 
     public List<GameObject> towerList = new();
-    [SerializeField] private int placeableTowers = 0;
     private int selectedTower;
 
     public static BuildManager Main { get => main; set => main = value; }
@@ -19,20 +18,20 @@ public class BuildManager : MonoBehaviour
         Main = this;
     }
 
-    public int GetPlaceableTowers()
+    public GameObject GetSelectedTower()
     {
-        return placeableTowers;
+        return towerPrefabs[selectedTower];
     }
+
+    public int GetPlaceableTowers() => Main.towerList.Count;
 
     public void LowerTower()
     {
-        Main.placeableTowers--;
         Main.towerList.Remove(Main.towerList[^1]);
     }
 
     public void IncreaseTower()
     {
-        Main.placeableTowers++;
         Main.towerList.Add(Main.towerPrefabs[Main.selectedTower]);
     }
 

@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ public class Plot : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject dimPrefab;
+    [SerializeField] private GameObject towerToBuild;
     [SerializeField] private GameObject levelManager;
     [Header("Variable")]
     [SerializeField] private bool shopTile;
@@ -64,17 +66,17 @@ public class Plot : MonoBehaviour
 
         if (tileBought == true)
         {
-            if (shopTile && !FindFirstObjectByType<Money>().shopSpawned)
+            if (shopTile && !Money.main.ShopSpawned)
             {
-                levelManager.GetComponent<Money>().OpenShop();
+                Money.main.OpenShop();
             }
-            else if (shopTile && FindFirstObjectByType<Money>().shopSpawned)
+            else if (shopTile && Money.main.ShopSpawned)
             {
-                levelManager.GetComponent<Money>().CloseShop();
+                Money.main.CloseShop();
             }
             else
             {
-                if (!levelManager.GetComponent<Money>().shopSpawned)
+                if (!Money.main.ShopSpawned)
                 {
                     if (tower != null || BuildManager.main.GetPlaceableTowers() == 0) return;
                     GameObject towerToBuild = BuildManager.main.GetTowerList()[^1];
@@ -84,11 +86,11 @@ public class Plot : MonoBehaviour
         }
         else
         {
-            if (FindFirstObjectByType<Money>().currentMoney >= tileCost && !FindFirstObjectByType<Money>().shopSpawned)
+            if (Money.main.currentMoney >= tileCost && !Money.main.ShopSpawned)
             {
                 Debug.Log("buy check");
                 tileBought = true;
-                FindFirstObjectByType<Money>().currentMoney -= tileCost;
+                Money.main.currentMoney -= tileCost;
                 if (numTilesBought == 0)
                 {
                     tileCost += 200f;
@@ -100,6 +102,13 @@ public class Plot : MonoBehaviour
                     numTilesBought++;
             }
         }
-        
+        if (tower != null) return;
+        {
+            Tower towerToBuild = BuildManager.main.GetSelectedTower().GetComponent<Tower>();
+
+           
+        }
     }
+
+ 
 }
