@@ -89,4 +89,9 @@ public class Money : MonoBehaviour
     {
         currentMoney -= num;
     }
+
+    public void ManualMoneyIncrease(float num)
+    {
+        currentMoney += num;
+    }
 }
