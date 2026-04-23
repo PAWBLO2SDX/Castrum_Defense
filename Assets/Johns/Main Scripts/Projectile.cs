@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
         rb.linearVelocity = direction * bulletSpeed;
     }
 
-    private void OnCollisionEnter2D(Collision other)
+    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
         Destroy(gameObject);
     }
