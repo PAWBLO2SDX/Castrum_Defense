@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class BuildManager : MonoBehaviour
 {
-    private static BuildManager main;
+    public static BuildManager main;
     [Header("References")]
     [SerializeField] private GameObject[] towerPrefabs;
     [SerializeField] private GameObject[] levelManager;
