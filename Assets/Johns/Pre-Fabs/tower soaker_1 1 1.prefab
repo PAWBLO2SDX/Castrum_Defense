@@ -114,7 +114,7 @@ MonoBehaviour:
   aps: 1
   freezeTime: 0.25
   turnSpeed: 360
-  angleOffset: 15
+  angleOffset: 10
 --- !u!50 &-1729070136759256860
 Rigidbody2D:
   serializedVersion: 5
