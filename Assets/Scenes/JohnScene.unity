@@ -8265,6 +8265,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1570453243783977474, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
+      propertyPath: 'towerList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 933051839265737739, guid: 31b32b39d33a24143868be7177177983, type: 3}
+    - target: {fileID: 1570453243783977474, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
       propertyPath: 'towerList.Array.data[1]'
       value: 
       objectReference: {fileID: 4228778536858483220, guid: e710b5cfcc18e224781ca663bb527f03, type: 3}
@@ -8276,6 +8280,10 @@ PrefabInstance:
       propertyPath: towerPrefabs.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1570453243783977474, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
+      propertyPath: 'towerPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 933051839265737739, guid: 31b32b39d33a24143868be7177177983, type: 3}
     - target: {fileID: 1570453243783977474, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
       propertyPath: 'towerPrefabs.Array.data[1]'
       value: 

@@ -111,7 +111,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8992733757394710362, guid: 7d0ca37db9e99294ebec582aa85e5012, type: 3}
   firingPoint: {fileID: 0}
   targetingRange: 2
-  aps: 1
+  aps: 0.25
   freezeTime: 0.25
   turnSpeed: 360
   angleOffset: 10
