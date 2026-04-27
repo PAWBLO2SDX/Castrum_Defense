@@ -31,9 +31,16 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Vector2.Distance(target.position, transform.position) <= 0.1f)
+        if (Vector2.Distance(target.position, transform.position) <= 0.05f)
         {
             pathIndex++;
+            //float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg -180;
+            //Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+            //gameObject.transform.rotation = targetRotation;
+
+            Vector3 newVec = (LevelManager.main.path[pathIndex].position - LevelManager.main.path[pathIndex - 1].position).normalized;
+            transform.up = newVec;
+
             if (pathIndex >= LevelManager.main.path.Length)
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
