@@ -47,7 +47,7 @@ public class Turret : MonoBehaviour
     {
         GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         Bullet bullet = bulletObj.GetComponent<Bullet>();
-        bullet.SetTarget(target);
+        bullet.SetTarget(target, gameObject);
     }
 
     private void FindTarget()

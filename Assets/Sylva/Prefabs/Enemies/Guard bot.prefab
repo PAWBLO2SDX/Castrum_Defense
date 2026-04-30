@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 1695206235826834744}
   - component: {fileID: 7652364319198583663}
   - component: {fileID: -6714710029659178989}
+  - component: {fileID: -3678031131253769069}
   m_Layer: 3
-  m_Name: Test5
+  m_Name: Guard bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3499336962632181011, guid: 4595738fa225a3a4e89a2debbf288aa6, type: 3}
+  m_Sprite: {fileID: 4333722654796408539, guid: d37c3057605a5c44d9b6e5f5d2412796, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -132,7 +133,7 @@ MonoBehaviour:
   rb: {fileID: 1695206235826834744}
   levelManager: {fileID: 5686809643442209502, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
   targetingRange: 5
-  moveSpeed: 4
+  moveSpeed: 0.5
 --- !u!61 &-6714710029659178989
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,7 +172,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.75, y: 4.75}
+    oldSize: {x: 4.125, y: 4.75}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -179,3 +180,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-3678031131253769069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971779606943906762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e57cbdee0389941aa8837c080a67ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 30
