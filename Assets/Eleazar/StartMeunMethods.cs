@@ -13,13 +13,14 @@ public class StartMeunMethods : MonoBehaviour
         Debug.Log("Quit the game!");
         Application.Quit();
     }
-    public void CreditButton(string sceneName)
+    public void CreditsButton(string sceneName)
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Credit");
     }
     public void QuitCredit()
     {
         Debug.Log("Quit the game!");
         Application.Quit();
     }
+   
 }

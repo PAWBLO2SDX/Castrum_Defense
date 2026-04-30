@@ -38,7 +38,8 @@ public class EnemyMovement : MonoBehaviour
             //Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
             //gameObject.transform.rotation = targetRotation;
 
-            Vector3 newVec = (LevelManager.main.path[pathIndex].position - LevelManager.main.path[pathIndex - 1].position).normalized;
+            Vector3 normalized = (LevelManager.main.path[pathIndex].position - LevelManager.main.path[pathIndex - 1].position).normalized;
+            Vector3 newVec = normalized;
             transform.up = newVec;
 
             if (pathIndex >= LevelManager.main.path.Length)

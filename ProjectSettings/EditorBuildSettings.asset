@@ -12,6 +12,21 @@ EditorBuildSettings:
     path: Assets/Eleazar/Start Menu.unity
     guid: c746866a0416a9f4dabd8e629c58d8b6
   - enabled: 1
+    path: Assets/Eleazar/Credit's/Jackson's Credit Scene.unity
+    guid: 3c56ae553a3989944b4d90e36da79347
+  - enabled: 1
+    path: Assets/Eleazar/Credit's/John's Credit Scene.unity
+    guid: 06c03483c1ffc244cbaaece320b64493
+  - enabled: 1
+    path: Assets/Eleazar/Credit's/Jayden's Credit Scene.unity
+    guid: a3ac7f0d769f8f844af727f54f05b5d9
+  - enabled: 1
+    path: Assets/Eleazar/Credit's/Sylva's Credit Scene.unity
+    guid: 11e116c91d99fcb4196f8624db135f8d
+  - enabled: 1
+    path: Assets/Eleazar/Credit's/Eleazar's Credit Scene.unity
+    guid: b2249cedae9093148af3270e9ff5018c
+  - enabled: 1
     path: Assets/Scenes/JohnScene.unity
     guid: f223763ad8bc69241b6162fa39d29f62
   m_configObjects:

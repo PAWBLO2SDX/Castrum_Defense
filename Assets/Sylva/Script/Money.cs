@@ -5,10 +5,11 @@ public class Money : MonoBehaviour
 
     public static Money main;
 
-    [SerializeField] private GameObject TowerPrefab;
+ 
     [Header("References")]
     [SerializeField] private GameObject levelManager;
     [SerializeField] private GameObject shopPrefab;
+    [SerializeField] private GameObject MoneyBackGround;
     [SerializeField] private Transform shopSpawn;
     [Header("Variables")]
     [SerializeField] private float startingMoney;
