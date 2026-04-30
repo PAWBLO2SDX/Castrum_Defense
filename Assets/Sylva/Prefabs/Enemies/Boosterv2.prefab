@@ -133,7 +133,7 @@ MonoBehaviour:
   rb: {fileID: 3344302614490888989}
   levelManager: {fileID: 5686809643442209502, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
   targetingRange: 5
-  moveSpeed: 50
+  moveSpeed: 4
 --- !u!61 &-8372807013465244041
 BoxCollider2D:
   m_ObjectHideFlags: 0
