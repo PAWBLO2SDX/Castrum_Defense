@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aa8bfd8a1f85d5b45b5723203b0ebf96
+guid: e20686b175443bc4e956a68498009b9b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3763752930381237044
-    second: New Piskel (2)_0
+      213: -6071787761595789186
+    second: soaker smaller image 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel (2)_0
+      name: soaker smaller image 1_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 191
-        width: 410
-        height: 38
+        x: 0
+        y: 0
+        width: 37
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43b85b559598b3430800000000000000
-      internalID: 3763752930381237044
+      spriteID: e70d486533dacbba0800000000000000
+      internalID: -6071787761595789186
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      New Piskel (2)_0: 3763752930381237044
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
