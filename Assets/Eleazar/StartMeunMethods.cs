@@ -15,7 +15,7 @@ public class StartMeunMethods : MonoBehaviour
     }
     public void CreditsButton(string sceneName)
     {
-        SceneManager.LoadScene("Credit");
+        SceneManager.LoadScene("John's Credit Scene");
     }
     public void QuitCredit()
     {
