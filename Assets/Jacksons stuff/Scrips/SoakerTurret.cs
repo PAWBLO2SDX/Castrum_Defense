@@ -44,8 +44,23 @@ public class SoakerTurret : MonoBehaviour
     private void Shoot()
     {
         GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+
+        // Support different bullet implementations
         Bullet bullet = bulletObj.GetComponent<Bullet>();
-        bullet.SetTarget(target);
+        if (bullet != null)
+        {
+            bullet.SetTarget(target);
+            return;
+        }
+
+        SlowBullet slowBullet = bulletObj.GetComponent<SlowBullet>();
+        if (slowBullet != null)
+        {
+            slowBullet.SetTarget(target);
+            return;
+        }
+
+        // If you add other bullet types, handle them here (or implement a common interface)
     }
 
     private void FindTarget()
