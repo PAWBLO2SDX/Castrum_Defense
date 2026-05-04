@@ -81,6 +81,7 @@ public class Plot : MonoBehaviour
                     if (tower != null || BuildManager.main.GetPlaceableTowers() == 0) return;
                     GameObject towerToBuild = BuildManager.main.GetTowerList()[^1];
                     tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
+                    BuildManager.main.LowerTower();
                 }
             }
         }
