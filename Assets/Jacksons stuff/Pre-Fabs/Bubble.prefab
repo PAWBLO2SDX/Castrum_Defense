@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1554680251065512481}
   m_Layer: 0
   m_Name: Bubble
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,6 +170,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   bulletspeed: 10
-  bulletDamage: 6
-  slowMultiplier: 0.25
+  bulletDamage: 2
+  slowMultiplier: 0.5
   slowDuration: 0.5

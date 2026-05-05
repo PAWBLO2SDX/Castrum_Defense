@@ -54,18 +54,10 @@ public class SlowBullet : MonoBehaviour
         if (movement != null)
         {
             int modifierId = movement.AddSpeedModifier(slowMultiplier);
-            StartCoroutine(RemoveSpeedModifierAfter(movement, modifierId, slowDuration));
+            // Start the removal coroutine on the enemy so it continues after the bullet is destroyed.
+            movement.StartCoroutine(movement.RemoveSpeedModifierAfter(modifierId, slowDuration));
         }
 
         Destroy(gameObject);
-    }
-
-    private IEnumerator RemoveSpeedModifierAfter(EnemyMovement movement, int id, float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        if (movement != null)
-        {
-            movement.RemoveSpeedModifier(id);
-        }
     }
 }

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 8659335526389463222}
   - component: {fileID: -468595269461999598}
   - component: {fileID: 3029030584936117856}
+  - component: {fileID: 6783192371101790214}
   m_Layer: 3
   m_Name: Booster
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,3 +194,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 5
+--- !u!114 &6783192371101790214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3139842738679443689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ae8ee14165a0248a2813ae3f3bca9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 4146803360228887759}
