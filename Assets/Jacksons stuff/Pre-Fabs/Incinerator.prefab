@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1129345839587114325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 240210681431851767}
   - component: {fileID: 4875582208227742485}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3521769168339680294}
   - component: {fileID: 3836907305541991042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Incinerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,8 +170,8 @@ MonoBehaviour:
     m_Bits: 8
   bulletPrefab: {fileID: 7806973508283147456, guid: a3effaa9ce04a4e4e83596fea8ccb602, type: 3}
   firingPoint: {fileID: 1129345839587114325}
-  targetingRange: 12
-  rotationSpeed: 180
+  targetingRange: 3
+  rotationSpeed: 600
   bps: 0.3
 --- !u!1 &8452933952731216383
 GameObject:
@@ -182,7 +182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4937037177072119914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RotatePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7935143080113173887}
   - component: {fileID: 3405323641839249386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7652364319198583663}
   - component: {fileID: -6714710029659178989}
   - component: {fileID: -873354341047703580}
+  - component: {fileID: -6041687376806179320}
   m_Layer: 3
   m_Name: Camera bot v3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,3 +194,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 215
+--- !u!114 &-6041687376806179320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971779606943906762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ae8ee14165a0248a2813ae3f3bca9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 4698664364773458911}

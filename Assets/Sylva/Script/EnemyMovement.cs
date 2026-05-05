@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -103,5 +104,12 @@ public class EnemyMovement : MonoBehaviour
             mul *= m;
         }
         moveSpeed = baseSpeed * mul;
+    }
+
+    // Run the timed removal on the enemy's MonoBehaviour so it survives after projectiles are destroyed.
+    public IEnumerator RemoveSpeedModifierAfter(int id, float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        RemoveSpeedModifier(id);
     }
 }
