@@ -5,7 +5,7 @@ public class StartMeunMethods : MonoBehaviour
 {
     public void StartButton(string sceneName)
     {
-        SceneManager.LoadScene("JohnScene");
+        SceneManager.LoadScene("Game");
     }
 
     public void QuitButton()
