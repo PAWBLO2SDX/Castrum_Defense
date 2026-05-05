@@ -9,15 +9,20 @@ public class Turret : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
+    public AudioSource audioSource;
+    public AudioClip shootingClip;
 
     [Header("Attributes")]
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 180f;
     [SerializeField] private float bps = 1f;
 
+    
+
     private Transform target;
     private float timeUntilFire;
 
+  
     private void Update()
     {
         if (target == null)
@@ -45,9 +50,13 @@ public class Turret : MonoBehaviour
 
     private void Shoot()
     {
+        audioSource.PlayOneShot(shootingClip);
         GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         Bullet bullet = bulletObj.GetComponent<Bullet>();
         bullet.SetTarget(target);
+
+
+
     }
 
     private void FindTarget()
