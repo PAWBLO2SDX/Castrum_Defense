@@ -7,7 +7,8 @@ public class SoakerTurret : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
-
+    public AudioSource audioSource;
+    public AudioClip shootingClip;
     [Header("Attributes")]
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 180f;
@@ -43,6 +44,7 @@ public class SoakerTurret : MonoBehaviour
 
     private void Shoot()
     {
+        audioSource.PlayOneShot(shootingClip);
         GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
 
         // Support different bullet implementations
