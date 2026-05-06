@@ -147,9 +147,9 @@ public class TurrentSoaker : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Handles.color = Color.blue;
-        Handles.DrawWireDisc(transform.position, Vector3.forward, targetingRange);
-    }
+    //private void OnDrawGizmosSelected()
+    //{
+        //Handles.color = Color.blue;
+        //Handles.DrawWireDisc(transform.position, Vector3.forward, targetingRange);
+    //}
 }

@@ -8947,15 +8947,15 @@ PrefabInstance:
     - target: {fileID: 1570453243783977474, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
       propertyPath: 'towerPrefabs.Array.data[0]'
       value: 
-      objectReference: {fileID: 8551142268917992726, guid: 5e2eeb66153f8aa45b29e85b66fac038, type: 3}
+      objectReference: {fileID: 8551142268917992726, guid: 04deb8d6e123f26408e4cb5c4bbb34e7, type: 3}
     - target: {fileID: 1570453243783977474, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
       propertyPath: 'towerPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 2465039099370476824, guid: 9c963e904319a3e4e80cdec51cc51873, type: 3}
+      objectReference: {fileID: 2465039099370476824, guid: 7f18ed167a14f5a4c8e92063e4d2afce, type: 3}
     - target: {fileID: 1570453243783977474, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
       propertyPath: 'towerPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 8329809750279455493, guid: e5aef43ba26a92d41b13b33df8277731, type: 3}
+      objectReference: {fileID: 8329809750279455493, guid: bd49c47388a2747498a9e3cae147bb4a, type: 3}
     - target: {fileID: 4444677625261159434, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
       propertyPath: waveBought
       value: 6
@@ -9043,6 +9043,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5686809643442209502, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1950039235}
+    - targetCorrespondingSourceObject: {fileID: 5686809643442209502, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1950039236}
   m_SourcePrefab: {fileID: 100100000, guid: c75d3531eac89a54daec181ecd602e22, type: 3}
 --- !u!1001 &1090193974
 PrefabInstance:
@@ -10420,6 +10423,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1950039236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578860311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e9d7ccac4608c419ae2d8cb784f388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &1971305822
 GameObject:
   m_ObjectHideFlags: 0
